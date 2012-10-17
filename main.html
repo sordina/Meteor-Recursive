@@ -1,0 +1,21 @@
+<head>
+  <title>Recursion in Meteor</title>
+</head>
+
+<body>
+	<h1> Testing Recursion in Meteor </h1>
+	{{> main}}
+</body>
+
+<template name="main">
+	<ul>
+		{{#each children}}
+			<li>{{> sub}}</li>
+		{{/each}}
+	</ul>
+</template>
+
+<template name="sub">
+	<h2>{{name}}</h2>
+	{{> main}}
+</template>
