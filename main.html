@@ -1,5 +1,6 @@
 <head>
-  <title>Recursion in Meteor</title>
+	<title>Recursion in Meteor</title>
+	<script type="text/javascript" src="/jquery-ui.js"></script>
 </head>
 
 <body>
@@ -16,6 +17,6 @@
 </template>
 
 <template name="sub">
-	<h2>{{name}}</h2>
+	<h2 id="{{_id}}">{{name}}</h2>
 	{{> main}}
 </template>
