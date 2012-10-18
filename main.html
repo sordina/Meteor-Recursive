@@ -5,8 +5,14 @@
 
 <body>
 	<h1> Testing Recursion in Meteor </h1>
-	{{> main}}
+	{{> initial}}
 </body>
+
+<template name="initial">
+	{{#each lists}}
+		{{> sub}}
+	{{/each}}
+</template>
 
 <template name="main">
 	<ul>
