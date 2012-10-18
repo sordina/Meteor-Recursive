@@ -12,20 +12,14 @@ Template.initial.lists = function () {
 	return Lists.find()
 }
 
-Template.main.children = function () {
-	return this.children || []
-}
-
 Template.main.rendered = function () {
-	$(function() {
-		$( "ul" ).sortable({
-			connectWith: "ul",
-			update: function(e,o){
-				var updated = parse($('body'))
-				Lists.update({name: "Item 1"}, {'$set' : updated})
-			}
-		}).disableSelection()
-	})
+	$( "ul" ).sortable({
+		connectWith: "ul",
+		update: function(e,o){
+			var updated = parse($('body'))
+			Lists.update({name: "Item 1"}, {'$set' : updated})
+		}
+	}).disableSelection()
 }
 
 function parse(jitem) {

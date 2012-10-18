@@ -16,9 +16,11 @@
 
 <template name="main">
 	<ul>
-		{{#each children}}
-			<li>{{> sub}}</li>
-		{{/each}}
+		{{#if children}}
+			{{#each children}}
+				<li>{{> sub}}</li>
+			{{/each}}
+		{{/if}}
 	</ul>
 </template>
 
